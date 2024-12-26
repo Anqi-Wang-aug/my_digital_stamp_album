@@ -17,6 +17,7 @@ body {
     border: none;
     border-radius: 5px;
     font-size: 10px;
+    transition: background-color 0.3s
 }
 #login-button:hover {
     background-color: #45A049;
