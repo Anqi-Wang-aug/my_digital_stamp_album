@@ -1,11 +1,26 @@
-body { 
+body,html { 
     font-family: Arial, sans-serif; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+.container{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100%;
 }
 .stamp { 
     border: 1px solid #ddd; 
     padding: 10px; 
     margin: 10px; 
     display: inline-block; 
+}
+form { 
+    background-color: #f9f9f9; 
+    padding: 20px; 
+    border-radius: 5px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 #login-button{
     position: absolute;
