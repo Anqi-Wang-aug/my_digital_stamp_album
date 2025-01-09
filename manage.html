@@ -1,0 +1,54 @@
+<head>
+    <title>Manage Panel</title>
+    <link rel='stylesheet' href = 'style.css'>
+</head>
+<body>
+    <p>
+        <button class="site-button" onclick = "showForm()">Add</button>
+        <form id="add-form">
+            <p>
+                <label for="img">Image: </label>
+                <input type="file" id="img" name="stamp-img"/>
+            </p>
+            <p>
+                <label for="year">Year: </label>
+                <input type="date" id="year" name="stamp-year"/> 
+            </p>
+            <p>
+                <label for="country">Country: </label>
+                <input type="text" id="country" name="country"/>
+            </p>
+            <p>
+                <label for="theme"> Theme (seperate with whitespace): </label>
+                <input type="text", id="theme"/>
+            </p>
+            <p>
+                <label for="format">Format: </label>
+                <select>
+                    <option> Booklet </option>
+                    <option> Book Pane </option>
+                    <option> Full Pane </option>
+                    <option> Mini Sheet </option>
+                    <option> Se-tenant </option>
+                    <option> Souvenir Sheet</option>
+                    <option> Stamp</option>
+                    <option> Stamp with Attached Label</option>
+                </select>
+            </p>
+            <p> 
+                <label for="designer"> Designer: </label>
+                <input type="text", id="designer"/>
+            </p>
+            <p>
+                <label for="description"> Description: </label>
+                <textarea  cols="30" rows="10"></textarea>
+            </p>
+            <input type="submit" id='submit' value="All writes completed!"/>
+        </form>
+    </p>
+    <script>
+        function showForm(){
+            document.getElementById("add-form").style.display='block';
+        }
+    </script>
+</body>
