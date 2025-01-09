@@ -7,6 +7,7 @@ body{
     display: none;
 }
 .site-button{
+    font-family: 'Times New Roman', Times, serif;
     background-color:#D8DBBD;
     border: none;
     border-radius: 5px;
@@ -63,4 +64,5 @@ input[type='submit']{
     color: #FAF6E3;
     border: none;
     background-color: #B59F78;
+    font-family: "Times New Roman";
 }
