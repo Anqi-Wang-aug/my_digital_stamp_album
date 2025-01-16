@@ -1,11 +1,11 @@
 <head>
     <title>Manage Panel</title>
-    <link rel='stylesheet' href = 'style.css'>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <p>
         <button class="site-button" onclick = "showForm()">Add</button>
-        <form id="add-form">
+        <form id="add-form" action="{{ url_for('add_submit') }}" method="post">
             <p>
                 <label for="img">Image: </label>
                 <input type="file" id="img" name="stamp-img"/>
@@ -16,15 +16,15 @@
             </p>
             <p>
                 <label for="country">Country: </label>
-                <input type="text" id="country" name="country"/>
+                <input type="text" id="country" name="stamp-country"/>
             </p>
             <p>
                 <label for="theme"> Theme (seperate with whitespace): </label>
-                <input type="text", id="theme"/>
+                <input type="text" id="theme" name="theme"/>
             </p>
             <p>
                 <label for="format">Format: </label>
-                <select>
+                <select name="stamp-format">
                     <option> Booklet </option>
                     <option> Book Pane </option>
                     <option> Full Pane </option>
@@ -37,19 +37,19 @@
             </p>
             <p>
                 <label for="printings"> Printings: </label>
-                <input type="text", id="printings"></inpput>
+                <input type="text" id="printings" name="printings"></inpput>
             </p>
             <p> 
                 <label for="designer"> Designer: </label>
-                <input type="text", id="designer"/>
+                <input type="text" id="designer" name="designer"/>
             </p>
             <p>
                 <label for="description"> Description: </label>
-                <textarea id="description" cols="30" rows="10"></textarea>
+                <textarea id="description" cols="30" rows="10" name="descrip"></textarea>
             </p>
             <p>
                 <label for='is-used'> Used? </label>
-                <input type="checkbox" id="is-used"/>
+                <input type="checkbox" id="is-used" name="is-used"/>
             </p>
             <input type="submit" id='submit' value="All writes completed!"/>
         </form>
