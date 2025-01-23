@@ -5,18 +5,18 @@
 <body>
     <p>
         <button class="site-button" onclick = "showForm()">Add</button>
-        <form id="add-form" action="{{ url_for('add_submit') }}" method="post">
+        <form id="add-form" action="{{ url_for('add_submit') }}" method="post" enctype="multipart/form-data">
             <p>
                 <label for="img">Image: </label>
-                <input type="file" id="img" name="stamp-img"/>
+                <input type="file" id = 'img' name="img">
             </p>
             <p>
                 <label for="year">Issued on: </label>
-                <input type="date" id="year" name="stamp-year"/> 
+                <input type="date" id="year" name="year"> 
             </p>
             <p>
                 <label for="country">Country: </label>
-                <input type="text" id="country" name="stamp-country"/>
+                <input type="text" id="country" name="country"/>
             </p>
             <p>
                 <label for="theme"> Theme (seperate with whitespace): </label>
@@ -45,11 +45,14 @@
             </p>
             <p>
                 <label for="description"> Description: </label>
-                <textarea id="description" cols="30" rows="10" name="descrip"></textarea>
+                <textarea id="descrip" cols="30" rows="10" name="descrip"></textarea>
             </p>
             <p>
                 <label for='is-used'> Used? </label>
-                <input type="checkbox" id="is-used" name="is-used"/>
+                <select name="is-used">
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
             </p>
             <input type="submit" id='submit' value="All writes completed!"/>
         </form>
